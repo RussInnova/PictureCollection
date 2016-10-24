@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewKR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-ZG-PiD">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="547" id="3Pb-8D-185"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E2z-X6-BdP">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CanalView" id="ZC2-X6-RbI" customClass="CanalView" customModule="CollectionViewKR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7RN-BQ-wkP"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhq-8d-iho">
+                                                    <color key="backgroundColor" red="1" green="0.41965120589999999" blue="0.46534770920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="kBw-6v-61T"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="zhq-8d-iho" firstAttribute="top" secondItem="7RN-BQ-wkP" secondAttribute="bottom" id="1QG-iJ-WfU"/>
+                                            <constraint firstAttribute="trailing" secondItem="zhq-8d-iho" secondAttribute="trailing" id="70e-72-UNL"/>
+                                            <constraint firstAttribute="trailing" secondItem="7RN-BQ-wkP" secondAttribute="trailing" id="AHL-yc-ynt"/>
+                                            <constraint firstItem="zhq-8d-iho" firstAttribute="leading" secondItem="ZC2-X6-RbI" secondAttribute="leading" id="Qqz-Vo-PVV"/>
+                                            <constraint firstItem="7RN-BQ-wkP" firstAttribute="top" secondItem="ZC2-X6-RbI" secondAttribute="topMargin" id="UHg-tl-wzu"/>
+                                            <constraint firstItem="7RN-BQ-wkP" firstAttribute="leading" secondItem="ZC2-X6-RbI" secondAttribute="leading" id="hst-Pi-jaU"/>
+                                            <constraint firstAttribute="bottom" secondItem="zhq-8d-iho" secondAttribute="bottom" id="s8q-cY-NLP"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="zhq-8d-iho" id="AFQ-g7-783"/>
+                                            <outlet property="thumbImg" destination="7RN-BQ-wkP" id="YrN-Wg-sLU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Collection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDV-ov-4JN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="txB-pA-1cm"/>
+                                    <constraint firstAttribute="height" constant="55" id="vgg-UH-Nzw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f4s-ZG-PiD" secondAttribute="bottom" constant="20" id="EWG-Nt-YJw"/>
+                            <constraint firstItem="MDV-ov-4JN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="O34-9o-K28"/>
+                            <constraint firstItem="f4s-ZG-PiD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="jC4-4c-G3I"/>
+                            <constraint firstAttribute="trailing" secondItem="f4s-ZG-PiD" secondAttribute="trailing" constant="20" id="oKh-ZG-uh0"/>
+                            <constraint firstItem="f4s-ZG-PiD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="zP4-NF-G2p"/>
+                            <constraint firstItem="MDV-ov-4JN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zxf-Hb-vBa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collection" destination="f4s-ZG-PiD" id="PpN-lM-KL8"/>
+                        <segue destination="Fl8-wz-DDe" kind="showDetail" identifier="PhotoVC" id="sWs-yr-CCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="358.4707646176912"/>
+        </scene>
+        <!--PhotoVC-->
+        <scene sceneID="41R-zF-Y3m">
+            <objects>
+                <viewController id="Fl8-wz-DDe" customClass="PhotoVC" customModule="CollectionViewKR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lkf-xd-wpH"/>
+                        <viewControllerLayoutGuide type="bottom" id="9BZ-pv-4Ct"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="LwA-R6-87j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U0c-lA-E48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa1-Rt-d9Z">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jgv-fb-Ddg"/>
+                                    <constraint firstAttribute="width" constant="250" id="dzy-9A-J7T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Return to photo collection">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnBtnPressed:" destination="Fl8-wz-DDe" eventType="touchUpInside" id="OPy-d8-ck6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaE-MX-SXN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="XLu-Me-fMH"/>
+                                    <constraint firstAttribute="height" constant="21" id="kOD-tK-Xya"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="U0c-lA-E48" secondAttribute="trailing" id="83d-Nn-c1F"/>
+                            <constraint firstItem="U0c-lA-E48" firstAttribute="leading" secondItem="LwA-R6-87j" secondAttribute="leadingMargin" id="FiV-mT-jEd"/>
+                            <constraint firstItem="9BZ-pv-4Ct" firstAttribute="top" secondItem="FaE-MX-SXN" secondAttribute="bottom" constant="20" id="K9j-cn-fkF"/>
+                            <constraint firstItem="9BZ-pv-4Ct" firstAttribute="top" secondItem="U0c-lA-E48" secondAttribute="bottom" constant="50" id="Kts-RO-FkM"/>
+                            <constraint firstItem="FaE-MX-SXN" firstAttribute="centerX" secondItem="LwA-R6-87j" secondAttribute="centerX" id="WMx-PN-udX"/>
+                            <constraint firstItem="Fa1-Rt-d9Z" firstAttribute="top" secondItem="lkf-xd-wpH" secondAttribute="bottom" constant="20" id="bNa-ta-QR6"/>
+                            <constraint firstItem="U0c-lA-E48" firstAttribute="top" secondItem="lkf-xd-wpH" secondAttribute="bottom" constant="50" id="czm-pH-nfK"/>
+                            <constraint firstItem="Fa1-Rt-d9Z" firstAttribute="centerX" secondItem="LwA-R6-87j" secondAttribute="centerX" id="i1M-cr-p49"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgLbl" destination="FaE-MX-SXN" id="t7r-ui-7QM"/>
+                        <outlet property="imgView" destination="U0c-lA-E48" id="KQ1-Je-tIW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EK7-CZ-KBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="357.57121439280365"/>
+        </scene>
+    </scenes>
+</document>
